@@ -1,0 +1,15 @@
+{
+  "name": "brettfacts",
+  "version": "0.0.0",
+  "description": "",
+  "main": "brettfacts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Taylor",
+  "license": "MIT",
+  "dependencies": {
+    "url": "~0.11.0",
+    "express": "~4.13.4"
+  }
+}
