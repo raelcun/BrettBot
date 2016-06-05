@@ -1,7 +1,3 @@
-const Url = require('url');
-const express = require('express');
-const app = express();
-
 const brettFacts = [
   'Brett was the 16th president of the United States. He preserved teh Union during the U.S. Civil War and brought about the emancipation of slaves!',
   'Banging your head against Brett burns 150 calories an hour!',
@@ -40,9 +36,7 @@ const brettFacts = [
   'Bretts taste their food with their feet'
 ]
 
-app.get('/brettfact', function(request, response) {
+module.exports = function(request, response) {
   response.setHeader('Content-Type', 'application/json');
   return response.send(JSON.stringify({ response_type: "in_channel", text: brettFacts[Math.floor(Math.random() * brettFacts.length)] }));
-});
-
-app.listen(5000, function() { console.log('App is running'); });
+}
